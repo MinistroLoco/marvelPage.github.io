@@ -1,0 +1,489 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root {
+    --color_blanco: #fff;
+    --altura_header: 80px;
+    --padding_left_right: 2rem;
+    --ancho_maximo: 1200px;
+    --gradante-walpaper: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+
+    --color-title: rgb(230, 230, 58);
+    --color--paragraph: bisque;
+    --background-pie: #86A7FC;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ----------index----------------- */
+.home {
+    background-image: var(--gradante-walpaper), url(../images/marvel-background.jpg);
+    font-family: "Open Sans", sans-serif;
+}
+
+.header {
+    height: var(--altura_header);
+
+
+}
+
+.img-header {
+    height: 100px;
+    width: 200px;
+    background-color: none;
+
+}
+
+.navbar {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+    padding: 0 var(--padding_left_right);
+
+}
+
+.ulHeader {
+    width: 100%;
+    position: absolute;
+    top: var(--altura_header);
+    left: 0;
+    height: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    transition: all .3s;
+    list-style: none;
+    background-color: #290B08;
+
+}
+
+.list-icon {
+    cursor: pointer;
+}
+
+.menu-hamburguesa {
+    display: none;
+}
+
+.menu-hamburguesa:checked+.ulHeader {
+    height: calc(100vh - var(--altura_header));
+
+}
+
+.links {
+    font-size: 2em;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+
+}
+
+/* ------------ *****SPIDERMAN********* ------------- */
+.body-spidey {
+    background-image: var(--gradante-walpaper), url(../images/spiderman/walpaper.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100px;
+}
+
+.about {
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    gap: 3rem;
+    align-items: start;
+}
+
+.subtitle {
+    color: var(--color-title);
+    font-size: 2rem;
+    margin-bottom: 25px;
+}
+
+.about_paragraph {
+    line-height: 1.7;
+    color: var(--color--paragraph);
+    font-size: 1.2rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.about_main {
+    padding-top: 80px;
+    display: grid;
+    width: 90%;
+    margin: o auto;
+    gap: 1em;
+    overflow: hidden;
+    grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+}
+
+.about_icons {
+    display: grid;
+    gap: 1em;
+    justify-items: center;
+    width: 260px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.about_icon {
+    width: 40px;
+}
+
+.about_title {
+    color: var(--color-title);
+}
+
+/* cardS SPIDERMAN*/
+.container-card {
+    width: 800px;
+    height: 2500px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: stretch;
+    gap: 0 25em;
+    max-width: 750px;
+}
+
+.card-persons {
+    width: 400px;
+    margin: 20px;
+    border-radius: 20px;
+    overflow: hidden;
+    background: white;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+    cursor: default;
+    transition: all 400ms ease;
+}
+
+.card-persons:hover {
+    box-shadow: 5px 5px 20px rgba(190, 22, 22, 0.6);
+    transform: translate(y(-6%));
+}
+
+.card-persons img {
+    width: 400px;
+    height: 300px;
+}
+
+.card-persons .spiderman {
+    padding: 15px;
+    text-align: center;
+}
+
+.card-persons .spiderman p {
+    line-height: 1.5;
+    color: #6a6a6a;
+}
+
+.card-persons .spiderman h3 {
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+.card-persons .spiderman a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px;
+    margin-top: 10px;
+    color: bisque;
+    border: 1px solid black;
+    border-radius: 4px;
+    transition: all 400ms ease;
+    background-color: #561C24;
+}
+
+.card-persons .spiderman a:hover {
+    background: red;
+    color: #fff;
+}
+
+/* ----------HULK-------------------- */
+.home-hulk {
+    background-image: url(../images/walpaper-hulk.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100px;
+}
+
+.carrousel {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    margin-top: 2rem;
+
+}
+
+#contentItemCarrousel {
+    border: 2px solid rgb(13, 51, 13);
+    height: 400px;
+    width: 1000px;
+    overflow: hidden;
+
+}
+
+.itemCarrousel {
+    border: 1px solid black;
+    height: 100%;
+    position: relative;
+
+}
+
+.tarjetaCarrousel {
+    height: 100%;
+}
+
+.imgCarrousel {
+    height: 100%;
+    width: 100%;
+}
+
+.flechasCarrousel {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    /* Esto alinea a los elementos en medio */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.svgCarrousel{
+    color: white;
+}
+
+#tarjetaCarrousel-1 {
+    background-color: rgb(116, 46, 126);
+}
+
+#tarjetaCarrousel-2 {
+    background-color: rgb(43, 172, 60);
+}
+
+#tarjetaCarrousel-3 {
+    background-color: rgb(41, 82, 116);
+}
+
+/* *****************4 FANTASTICOS********* */
+.fantasticos4 {
+    background-image: var(--gradante-walpaper), url(../images/walpaper-4fantasticos.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+/* CARDS / TARJETAS */
+
+.title-container{
+    text-align: center;
+    text-decoration: solid;
+    color: bisque;
+    font-weight: bold;
+}
+
+.containerF{
+    width: 400px;
+    /* max-width: 400px; */
+    display: grid;
+    grid-template-columns: 1.5fr 1.5fr;
+    grid-template-rows: 750px 750px;
+    grid-template-areas: 
+    "card card"
+    "card card";   
+    gap: 2rem 5rem;
+    place-items: right; 
+    }
+
+.card {
+    width: 400px;
+    height: 730px;
+    margin: 20px;
+    border-radius: 20px;
+    overflow: hidden;
+    background: rgb(20, 174, 176);
+    background: linear-gradient(69deg, rgba(20, 174, 176, 0.8183473218388918) 0%, rgba(20, 123, 156, 1) 4%, rgba(19, 64, 133, 1) 30%, rgba(68, 98, 227, 1) 88%, rgba(19, 29, 120, 1) 100%);
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+    cursor: default;
+    transition: all 400ms ease;
+    grid-area: "card";
+}
+
+.card:hover {
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+    transform: translate(y(-3%));
+}
+
+.card img {
+    width: 100%;
+    height: 350px;
+}
+
+.card .oceanos1 {
+    padding: 15px;
+    text-align: center;
+}
+
+.card .oceanos1 p {
+    line-height: 1.5;
+    color: bisque;
+}
+
+.card .oceanos1 h3 {
+    font-weight: 400;
+    font-size: 2em;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.card .oceanos1 a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px;
+    margin-top: 10px;
+    color: #fff;
+    border: 1px solid #2fb4cc;
+    border-radius: 4px;
+    transition: all 400ms ease;
+}
+
+.card .oceanos1 a:hover {
+    background: steelblue;
+    color: #fff;
+}
+
+.title-enemies{
+    text-align: center;
+    font-size: 2rem;
+    color: bisque;
+    font-weight:bold;
+}
+
+/* FIN DE cardS O TARJETAS */
+
+/* ------------------FOOTER ------------- */
+
+.pie {
+    background-color: var(--background-pie);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(3, 50px);
+    grid-template-areas:
+        "tit  tit  tit"
+        "p    p    p"
+        "img1 img2 img3";
+    align-items: center;
+    justify-items: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.pie h2 {
+    grid-area: tit;
+}
+
+.pie .p-footer {
+    grid-area: p;
+}
+
+.pie .icon-pie1 {
+    grid-area: img1;
+}
+
+.pie .icon-pie2 {
+    grid-area: img2;
+}
+
+.pie .icon-pie3 {
+    grid-area: img3;
+}
+
+
+/* -------------media queries--------- */
+/* Tablet y celular*/
+@media (min-width:768px) {
+    .label-hamburguesa {
+        display: none;
+    }
+
+    .ulHeader {
+        position: static;
+        height: auto;
+        width: auto;
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    .links {
+        font-size: 1.5rem;
+        gap: 2rem;
+    }
+
+}
+
+/* spiderman */
+@media (min-width:768px) {
+    .label-hamburguesa {
+        display: none;
+    }
+
+    .body-spidey {
+        width: 100%;
+        height: 100%;
+
+    }
+
+    .header-home {
+        position: static;
+        height: auto;
+        width: auto;
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    .about {
+        align-items: start;
+        justify-content: center;
+
+    }
+
+    .card-persons {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+
+}
+
+/* hulk */
+@media (min-width:768px) {
+    .label-hamburguesa {
+        display: none;
+    }
+
+    .carrousel {
+        position: relative;
+    }
+}
